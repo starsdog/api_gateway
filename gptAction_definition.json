@@ -1,0 +1,36 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+      "title": "Get news data",
+      "description": "Retrieves news data for a topic.",
+      "version": "v1.0.0"
+    },
+    "servers": [
+      {
+        "url": "https://minebook.tw"
+      }
+    ],
+    "paths": {
+      "/gpt/news/query": {
+        "get": {
+          "description": "Get news data for a topic",
+          "operationId": "QueryNews",
+          "parameters": [
+            {
+              "name": "topic",
+              "in": "query",
+              "description": "The topic that we want to query",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "deprecated": false
+        }
+      }
+    },
+    "components": {
+      "schemas": {}
+    }
+  }
